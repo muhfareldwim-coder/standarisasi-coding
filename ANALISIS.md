@@ -3,6 +3,7 @@
 ## 1. Identifikasi Masalah
 
 Berdasarkan skenario:
+
 - 15 developer, semua commit langsung ke main.
 - Tidak ada CI/CD.
 - Test coverage 25%.
@@ -10,13 +11,13 @@ Berdasarkan skenario:
 
 ### Masalah Utama
 
-| No | Masalah | Dampak |
-|---|---|---|
-| 1 | Tidak ada branch strategy | Konflik merge dan main sering rusak |
-| 2 | Tidak ada code review | Kode berkualitas rendah masuk |
-| 3 | Tidak ada CI/CD | Bug tidak terdeteksi sebelum production |
-| 4 | Coverage 25% | Regresi tidak terdeteksi |
-| 5 | Tidak ada quality gate | Tidak ada standar minimum kualitas |
+| No  | Masalah                   | Dampak                                  |
+| --- | ------------------------- | --------------------------------------- |
+| 1   | Tidak ada branch strategy | Konflik merge dan main sering rusak     |
+| 2   | Tidak ada code review     | Kode berkualitas rendah masuk           |
+| 3   | Tidak ada CI/CD           | Bug tidak terdeteksi sebelum production |
+| 4   | Coverage 25%              | Regresi tidak terdeteksi                |
+| 5   | Tidak ada quality gate    | Tidak ada standar minimum kualitas      |
 
 ### Akar Masalah
 
@@ -32,6 +33,7 @@ Alasan:
 Mengurangi risiko kerusakan pada branch main.
 
 Aksi:
+
 - Mengaktifkan branch protection.
 - Mewajibkan minimal 1 reviewer.
 
@@ -41,6 +43,7 @@ Alasan:
 Mendeteksi kesalahan kode lebih awal.
 
 Aksi:
+
 - Menggunakan GitHub Actions.
 - Menjalankan lint dan test otomatis.
 
@@ -50,6 +53,7 @@ Alasan:
 Coverage tidak bisa langsung meningkat dari 25% menjadi 80%.
 
 Aksi:
+
 - Menaikkan target coverage secara bertahap.
 - Menambahkan unit test pada fitur baru.
 
@@ -59,6 +63,7 @@ Alasan:
 Memastikan kualitas kode sebelum proses deployment.
 
 Aksi:
+
 - Menambahkan coverage threshold.
 - Mengatur deployment otomatis ke staging.
 
@@ -90,10 +95,10 @@ Aksi:
 
 ## 4. Metrik Keberhasilan
 
-| Metrik | Baseline | Target 3 Bulan |
-|---|---|---|
-| Test coverage | 25% | >=70% |
-| Bug production/minggu | ~5 | <=1 |
-| Waktu merge PR | Belum diketahui | <1 hari |
-| Broken main/bulan | Belum diketahui | 0 |
-| Waktu code review | Belum diketahui | <4 jam |
+| Metrik                | Baseline        | Target 3 Bulan |
+| --------------------- | --------------- | -------------- |
+| Test coverage         | 25%             | >=70%          |
+| Bug production/minggu | ~5              | <=1            |
+| Waktu merge PR        | Belum diketahui | <1 hari        |
+| Broken main/bulan     | Belum diketahui | 0              |
+| Waktu code review     | Belum diketahui | <4 jam         |
